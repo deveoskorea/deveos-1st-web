@@ -1,9 +1,16 @@
 @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-@font-face {
-    font-family: 'WONDotum';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/WONDotum.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+@import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css);
+.font-iropke-batang,
+.font-iropke-batang * {
+    font-family: 'Iropke Batang', sans-serif;
+    font-weight: 400 !important;
+}
+
+.font-hanna,
+.font-hanna * {
+    font-family: 'hanna', sans-serif;
+    font-weight: 400 !important;
 }
 
 @media screen {
@@ -133,6 +140,9 @@
     .background-black {
         background-color: #292929;
     }
+    .background-yellow {
+        background-color: #f9c00c;
+    }
     .filter-gray::before {
         content: '';
         width: 100%;
@@ -145,23 +155,23 @@
         width: 100%;
         height: auto;
         position: relative;
-        max-width: 960px;
+        max-width: 1024px;
         margin: 0 auto;
     }
     .text-header {
         font-weight: 700;
         font-size: 19px;
         color: #e0e0e0;
-	}
-	.text-big{
-		font-size: 120px;
-		font-weight: 700;
-		line-height: .8em;
-	}
-	.text-small{
-		font-size: 9px;
-		font-weight: 700;
-	}
+    }
+    .text-big {
+        font-size: 120px;
+        font-weight: 700;
+        line-height: .8em;
+    }
+    .text-small {
+        font-size: 9px;
+        font-weight: 700;
+    }
     .text-title {
         font-weight: 700;
         font-size: 73px;
@@ -242,6 +252,11 @@
     .color-yellow::after {
         color: #f9c00c;
     }
+    .color-red,
+    .color-red::before,
+    .color-red::after {
+        color: #E21C21;
+    }
     .box-yellow {
         width: auto;
         height: auto;
@@ -252,8 +267,21 @@
         width: auto;
         height: auto;
         padding: 10px;
-		background-color: #f9c00c;
-		border-radius: 40px;
+        background-color: #f9c00c;
+        border-radius: 40px;
+    }
+    .box-black {
+        width: auto;
+        height: auto;
+        padding: 16px;
+        border: 3px solid #292929;
+    }
+    .box-black-fill {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        background-color: #292929;
+        border-radius: 40px;
     }
     .display-inline-block {
         display: inline-block;
@@ -305,6 +333,53 @@
         background-position: 100% 100%;
         background-repeat: no-repeat;
     }
+    .floating{
+        width: auto;
+        height: auto;
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        bottom: 20px;
+        right: 20px;
+    }
+    .button-icon{
+        width: auto;
+        height: auto;
+        padding: 0;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        text-decoration: transparent;
+        display: inline-block;
+    }
+    .button-black {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #292929;
+        color: #ffffff;
+        border: none;
+        text-decoration: transparent;
+        display: inline-block;
+    }
+    .button-yellow {
+        width: auto;
+        height: auto;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #f9c00c;
+        color: #292929;
+        border: none;
+        text-decoration: transparent;
+        display: inline-block;
+    }
+    .button-round {
+        border-radius: 4px;
+    }
+    .shadow {
+        box-shadow: 5px 10px;
+    }
     .partition {
         position: relative;
         padding: 15px;
@@ -351,5 +426,35 @@
         display: block;
         content: '';
         clear: both;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 14px;
+    }
+    .section .space {
+        padding: 5px 0;
+    }
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .newline {
+        display: none;
+    }
+    .partition {
+        width: 100% !important;
+        display: block;
+        float: unset;
+    }
+    .desktopOnly {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 640.1px) {
+    .mobileOnly {
+        display: none !important;
     }
 }
