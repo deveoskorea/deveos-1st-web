@@ -1,6 +1,22 @@
 @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
 @import url(https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css);
+@font-face{
+ font-family:'Godo';
+ font-style:normal;
+ font-weight:400;
+ src:url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'),
+     url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff');
+}
+@font-face{
+ font-family:'Godo';
+ font-style:normal;
+ font-weight:700;
+ src:url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'),
+     url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff');
+}
+
+
 .font-iropke-batang,
 .font-iropke-batang * {
     font-family: 'Iropke Batang', sans-serif;
@@ -9,8 +25,7 @@
 
 .font-hanna,
 .font-hanna * {
-    font-family: 'hanna', sans-serif;
-    font-weight: 400 !important;
+    font-family: 'Godo', sans-serif;
 }
 
 @media screen {
